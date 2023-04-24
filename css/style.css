@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  text-align: center;
+  background-color: darkturquoise;
+}
+
+.canvas-container {
+  width: 60vw;
+  height: 80vh;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  background-color: lightpink;
+  border: 5px solid black;
+
+  cursor: crosshair;
+}
+
+.control-panel {
+  border: 5px solid black;
+  display: flex;
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .canvas-container {
+    width: 80vw;
+  }
+}

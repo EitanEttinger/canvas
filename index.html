@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <title>Canvas Examples</title>
+  </head>
+
+  <body onload="init()">
+    <h1>Hi Canvas</h1>
+
+    <div class="canvas-container">
+      <canvas
+        class="canvas"
+        height="500"
+        width="500"
+        onclick="draw(event)"
+      >
+      </canvas>
+    </div>
+    <div class="control-panel">
+      <input
+        type="color"
+        class="fill-color"
+        onchange="setFillColor(this.value)"
+        value="#ffffff"
+      />
+      <input
+        type="color"
+        class="stroke-color"
+        onchange="setStrokeColor(this.value)"
+        value="#000000"
+      />
+      <select
+        name="shapes"
+        class="shapes"
+        onchange="setShape(this.value)"
+      >
+        <option value="line">Line</option>
+        <option value="triangle">Triangle</option>
+        <option value="rect">Rectangle</option>
+        <option value="arc">Circle</option>
+        <option value="text">Text</option>
+        <option value="pencil">Pencil</option>
+      </select>
+      <button onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
